@@ -1,0 +1,142 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Newland Newland, Newland, LIC=D0D7S-LG9LM-Y8GFK-ZTC60-6BJKI-NCE5W
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+F:\毕设学习资料\李景龙\code\onenet_baidu_mqtt\onenet_baidu_mqtt\onenet_baidu_mqtt\MDK-ARM\onenet_old.uvprojx
+Project File Date:  05/11/2023
+
+<h2>Output:</h2>
+Build target 'onenet_old'
+compiling main.c...
+..\esp8266\esp8266.h(128): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\bh1750\bh1750.h(18): warning:  #1295-D: Deprecated declaration BH1750_Start - give arg types
+  void BH1750_Start();
+..\bh1750\bh1750.h(19): warning:  #1295-D: Deprecated declaration BH1750_Stop - give arg types
+  void BH1750_Stop();
+..\bh1750\bh1750.h(20): warning:  #1295-D: Deprecated declaration Init_BH1750 - give arg types
+  void Init_BH1750();
+..\bh1750\bh1750.h(26): warning:  #1295-D: Deprecated declaration BH1750_RecvACK - give arg types
+  int BH1750_RecvACK();
+..\bh1750\bh1750.h(28): warning:  #1295-D: Deprecated declaration BH1750_RecvByte - give arg types
+  uint8_t BH1750_RecvByte();
+..\MQ3\MQ3.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Src/main.c(162): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        if(1==Subscribe(subscribeTopic,strlen(subscribeTopic)))
+../Src/main.c(167): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(subscribeTopic,"topic/%s/%s/cmdp",PROID,DEVID);
+../Src/main.c(168): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        if(1==Subscribe(subscribeTopic,strlen(subscribeTopic)))
+../Src/main.c(333): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(userSensorList,//"\"data\":{\"tem\":%2d,\"hum\":%2d},"
+../Src/main.c(360): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+    sprintf(publishTopic,"topic/%s/%s/dp",PROID,DEVID);  //自定义主题，别的终端可以订阅
+../Src/main.c(361): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        Publish(publishTopic,strlen(publishTopic),userSensorList,strlen(userSensorList));
+../Src/main.c(361): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        Publish(publishTopic,strlen(publishTopic),userSensorList,strlen(userSensorList));
+../Src/main.c(364): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(publishTopic,"$dp");
+../Src/main.c(365): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        Publish(publishTopic,strlen(publishTopic),userSensorList,strlen(userSensorList));
+../Src/main.c(365): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        Publish(publishTopic,strlen(publishTopic),userSensorList,strlen(userSensorList));
+../Src/main.c(389): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        uint8_t *ptr=strstr(cmdStr,"{\"cmd\":{");
+../Src/main.c(389): warning:  #144-D: a value of type "char *" cannot be used to initialize an entity of type "uint8_t *"
+        uint8_t *ptr=strstr(cmdStr,"{\"cmd\":{");
+../Src/main.c(394): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if(strstr(ptr,"\"LED0\":1")) 
+../Src/main.c(397): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"LED0\":\"ON\"}");
+../Src/main.c(400): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"LED0\":0")) 
+../Src/main.c(403): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"LED0\":\"OFF\"}");
+../Src/main.c(406): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"LED0\":2")) 
+../Src/main.c(409): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"LED0\":\"%s\"}",
+../Src/main.c(414): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"LED1\":1")) 
+../Src/main.c(417): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"LED1\":\"ON\"}");
+../Src/main.c(420): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"LED1\":0")) 
+../Src/main.c(423): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"LED1\":\"OFF\"}");
+../Src/main.c(426): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"LED1\":2")) 
+../Src/main.c(429): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"LED1\":\"%s\"}",
+../Src/main.c(434): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"RELAY\":1")) 
+../Src/main.c(437): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"RELAY\":\"ON\"}");
+../Src/main.c(440): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"RELAY\":0")) 
+../Src/main.c(443): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"RELAY\":\"OFF\"}");
+../Src/main.c(446): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if((res==0) && strstr(ptr,"\"RELAY\":2")) 
+../Src/main.c(449): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"OK\",\"RELAY\":\"%s\"}",
+../Src/main.c(460): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(cmdAck,"{\"RESULT\":\"ERROR\"}");
+../Src/main.c(477): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+        uint8_t *ptr = strstr(topicAndDatas,"/cmdp");
+../Src/main.c(477): warning:  #144-D: a value of type "char *" cannot be used to initialize an entity of type "uint8_t *"
+        uint8_t *ptr = strstr(topicAndDatas,"/cmdp");
+../Src/main.c(490): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+    sprintf(t,"tem:%2d",temp);
+../Src/main.c(493): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(h,"hum:%2d",humi);
+../Src/main.c(496): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(m,"MQ-3:%.2f",mq3);
+../Src/main.c(499): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+        sprintf(i,"ill:%d",ill); 
+../Src/main.c: 44 warnings, 0 errors
+linking...
+Program Size: Code=16976 RO-data=440 RW-data=96 ZI-data=2128  
+FromELF: creating hex file...
+"onenet_old\onenet_old.axf" - 0 Error(s), 44 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.3.0.pack
+                ARM::CMSIS:CORE:4.1.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.1.0
+
+<h2>Collection of Component include folders:</h2>
+  F:\毕设学习资料\李景龙\code\onenet_baidu_mqtt\onenet_baidu_mqtt\onenet_baidu_mqtt\MDK-ARM\RTE
+  D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include
+  D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.1.0
+</pre>
+</body>
+</html>
